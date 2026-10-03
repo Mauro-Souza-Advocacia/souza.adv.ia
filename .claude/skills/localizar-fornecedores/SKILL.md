@@ -42,12 +42,33 @@ Use `WebSearch` com as consultas abaixo, substituindo `{termo}` por cada variaç
 {termo} Ananindeua OR Marituba OR Benevides PA
 ```
 
-Fontes complementares, via `WebSearch` com `site:` ou via `WebFetch`:
-- Google Maps e Google Meu Negócio: `{termo} Belém PA maps`
-- Guias empresariais: `site:guiamais.com.br`, `site:telelistas.net`, `site:apontador.com.br`
-- Associações e federações locais: `{termo} associação Pará`, `site:fiepa.org.br`, `site:fecomerciopa.com.br`
-- Redes sociais comerciais: `site:instagram.com {termo} Belém`, `site:facebook.com {termo} Belém`
-- Cadastro de CNPJ para confirmar a sede: `{razão social} CNPJ Belém` (consultar sites públicos como cnpj.biz ou casadosdados.com.br)
+### 2.1 Plataformas obrigatórias (não pule nenhuma)
+
+Pequenas lojas locais muitas vezes não têm site e só aparecem nestas plataformas. Consulte **todas**, para cada termo principal, via `WebSearch` com `site:` ou via `WebFetch`:
+
+| Plataforma | Consultas |
+|---|---|
+| **Google Maps / Google Meu Negócio** | `{termo} Belém PA maps`; `{termo} perto de Belém, PA`; `{termo} Pedreira Belém`; `{termo} Reduto Belém`; `{termo} São Brás Belém`; `{termo} Marco Belém`; `{termo} Umarizal Belém`; `{termo} Batista Campos Belém`; `{termo} Nazaré Belém`; `{termo} Cidade Velha Belém`; `{termo} Icoaraci Belém`; `{termo} Ananindeua` |
+| **Telelistas** | `site:telelistas.net {termo} belem pa`; `site:telelistas.net/pa/belem {termo}` |
+| **Instagram** | `site:instagram.com {termo} Belém`; `site:instagram.com {termo} Belém PA whatsapp`; `site:instagram.com/explore/tags {termo}belem` |
+| **Guias complementares** | `site:guiafacil.com {termo} belem pa`; `site:applocal.com.br {termo} belem`; `site:paginaamarela.com.br {termo} belem`; `site:guiamais.com.br {termo} belem`; `site:apontador.com.br {termo} belem` |
+| **Facebook** | `site:facebook.com {termo} Belém PA` |
+| **Associações locais** | `{termo} associação Pará`; `site:fiepa.org.br`; `site:fecomerciopa.com.br` |
+| **CNPJ (confirmar sede)** | `{razão social} CNPJ Belém` em cnpj.biz, casadosdados.com.br ou econodata.com.br |
+
+**Dica:** quando o operador citar o nome de uma loja específica (ex.: "A.P. Casseb"), busque também por esse nome em todas as plataformas acima, para confirmar se ela entra na lista.
+
+### 2.2 Validar as sugestões das plataformas (obrigatório)
+
+As plataformas sugerem e ranqueiam resultados por anúncio, proximidade e popularidade, e não por verdade. Cada empresa sugerida por Google Maps, Telelistas, Instagram, Facebook ou guias deve passar por esta checagem **antes** de entrar nas tabelas:
+
+1. **Existe e está ativa?** Confirme em pelo menos uma segunda fonte (CNPJ ativo, perfil com publicações recentes, avaliações recentes ou outro guia).
+2. **Está mesmo em Belém?** Compare o endereço da sugestão com o CNPJ ou o site. Cuidado com homônimos: existe Belém em outros estados (AL, PB, entre outros), e vários guias misturam listagens. Descarte se o endereço não for Belém/PA.
+3. **Os dados batem entre as fontes?** Telefone, WhatsApp e endereço devem coincidir em pelo menos duas fontes. Se divergirem, registre os dois valores e marque confiança "Baixa".
+4. **Vende o que o operador procura?** Leia o perfil, as fotos, os produtos ou os serviços. Marque "não confirmado" quando a plataforma só mostrar a categoria genérica.
+5. **Descarte as sugestões:** patrocinadas ou anúncios sem identificação da empresa, perfis abandonados (sem atividade há mais de 12 meses), perfis de revendedor informal sem CNPJ ou contato comercial e duplicatas (mesmo telefone, CNPJ ou endereço em plataformas diferentes).
+6. **Instagram:** use só o contato que consta na bio ou no botão de contato do perfil comercial. Não use contato de comentários ou mensagens de terceiros.
+7. **Registre a plataforma de origem** de cada empresa na coluna "Observações" (ex.: "origem: Google Maps; confirmado em Telelistas").
 
 **Critério de "sediada em Belém":** o endereço da matriz, ou da unidade que atende, deve ser em Belém/PA. Confirme no site (rodapé ou "Contato") ou no CNPJ. Filiais de empresas nacionais ficam na lista de Belém só se tiverem endereço local e contato local, com a observação "filial".
 
@@ -118,12 +139,14 @@ Se o `WebFetch` não retornar o contato, tente nesta ordem:
 Use as mesmas colunas e acrescente "Cidade/UF" depois de "Empresa". No campo "Observações", diga se atendem o Pará.
 
 ### 6.4 Fontes
-Liste as URLs consultadas, agrupadas por empresa.
+Liste as URLs consultadas, agrupadas por empresa. Informe também, em uma linha, se cada plataforma obrigatória (Google Maps, Telelistas, Instagram) foi consultada, e quais ficaram inacessíveis (por exemplo, por bloqueio de rede).
 
 ### 6.5 Alertas
 - Empresas encontradas, mas sem contato verificável
 - Campos "não encontrado" que merecem uma ligação ou visita ao site
 - Contatos de confiança "Baixa" que precisam de conferência
+- Sugestões das plataformas descartadas na validação (2.2) e o motivo
+- Plataformas que não puderam ser consultadas, o que limita a cobertura de lojas pequenas
 
 ### 6.6 Próximos passos (ofereça ao operador)
 - Redigir um e-mail padrão de pedido de cotação para todas as empresas
